@@ -1,0 +1,120 @@
+:root {
+  --blue-50: #f2f9ff;
+  --blue-100: #e6f2ff;
+  --blue-200: #cfe8ff;
+  --blue-400: #69a7ff;
+  --blue-600: #1f6feb;
+  --text: #0f2940;
+  --muted: #47607a;
+  --card-border: #d6e6ff;
+}
+
+* { box-sizing: border-box; }
+
+.welcome {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+  border-bottom: 3px solid var(--blue-200);
+}
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px 36px;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 0.3px;
+}
+.subtitle {
+  margin: 10px auto 22px;
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn.primary {
+  background: var(--blue-600);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(31, 111, 235, 0.25);
+}
+.btn.primary:hover { transform: translateY(-2px); }
+.btn.outline {
+  background: #fff;
+  color: var(--blue-600);
+  border-color: var(--blue-600);
+}
+.btn.outline:hover { background: var(--blue-50); }
+
+/* Cards */
+.cards {
+  max-width: 1100px;
+  margin: 28px auto 10px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+.card h3 { margin: 4px 0 8px; }
+.card p { margin: 0 0 12px; color: var(--muted); }
+.card-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  text-decoration: none;
+}
+.card-link:hover { text-decoration: underline; }
+
+/* Info */
+.info {
+  max-width: 1100px;
+  margin: 14px auto 22px;
+  padding: 0 20px;
+}
+.info h2 { margin-bottom: 10px; }
+.info ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 18px 12px 22px;
+  color: var(--muted);
+  border-top: 1px solid var(--card-border);
+  background: var(--blue-50);
+}
